@@ -15,10 +15,13 @@ Simple and easy to run, if you have a Nvidia GPU and want to mine eth, be sure t
 ```
 nvidia-docker run -it anthonytatowicz/eth-cuda-miner:latest ARG1 ARG2 ...
 
-#Example
-nvidia-docker run -it anthonytatowicz/eth-cuda-miner -S us-west1.nanopool.org:9999 \
+# Example
+nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
+-S us-west1.nanopool.org:9999 \
 -O 0x20ad58fe023265577565c7eb44b55c31e7497c33.cSquared/ajtatowicz@gmail.com
 ```
+
+**Note** --farm-recheck, -U, -E and -R are set by default
 
 ### Help
 ```
