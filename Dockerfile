@@ -1,4 +1,4 @@
-FROM nvidia/cuda:7.5-cudnn4-devel
+FROM nvidia/cuda:7.5-runtime-ubuntu14.04
 
 MAINTAINER Anthony Tatowicz
 
@@ -39,4 +39,4 @@ ENV GPU_USE_SYNC_OBJECTS=1
 ENV GPU_MAX_ALLOC_PERCENT=100
 ENV GPU_SINGLE_ALLOC_PERCENT=100
 
-ENTRYPOINT /cpp-ethereum/build/ethminer/ethminer --farm-recheck 200 -U -E old -R /data -S $POOL -O $MINER
+ENTRYPOINT /cpp-ethereum/build/ethminer/ethminer --farm-recheck 200 -U -E old -R /data
