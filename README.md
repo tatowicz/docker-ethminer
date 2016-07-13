@@ -1,6 +1,6 @@
 # Ethereum CUDA Miner
 
-![Ethereum](assets/eth.png) ![Cuda](assets/cuda.jpg)
+![Ethereum](https://github.com/Anthony-Tatowicz/eth-cuda-miner/blob/master/assets/eth.png) ![Cuda](https://github.com/Anthony-Tatowicz/eth-cuda-miner/blob/master/assets/cuda.jpg)
 
 ### Docker container for Ethereum mining with CUDA.
 
