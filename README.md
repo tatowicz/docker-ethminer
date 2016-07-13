@@ -10,7 +10,7 @@ Simple and easy to run, if you have a Nvidia GPU and want to mine eth, be sure t
 
 ### Requirements
 - Nvidia drivers for your GPU, you can get them here: [Nvidia drivers](http://www.nvidia.com/Download/index.aspx)
-- nvidia-docker (so docker can access your GPU) install instrutions here: [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+- nvidia-docker (so docker can access your GPU) install instructions here: [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
 ### How to run
 ```
