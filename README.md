@@ -98,5 +98,5 @@ General Options:
 ```
 
 ### Questions?
-You can leave a comment below or email to `ajtatowicz@gmail.com`. I may have ran into and issue that you have.  
+You can leave a comment below or email to `ajtatowicz@gmail.com`. I may have ran into the issue you have.  
 If this helped and you'd like to leave a tip --> `0x20ad58fe023265577565c7eb44b55c31e7497c33`
