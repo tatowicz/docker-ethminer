@@ -96,3 +96,7 @@ General Options:
     -V,--version  Show the version and exit.
     -h,--help  Show this help message and exit.
 ```
+
+### Questions?
+You can leave a comment below or email to `ajtatowicz@gmail.com`. I may have ran into and issue that you have.  
+If this helped and you'd like to leave a tip --> `0x20ad58fe023265577565c7eb44b55c31e7497c33`
