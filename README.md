@@ -3,7 +3,7 @@
 
 ### Docker container for Ethereum mining with CUDA.
 
-Simple and easy to run, if you have a Nvidia GPU and want to mine eth, be sure to have an eth or geth node running before trying to run this image.
+Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
 **Note** This image builds the Genoil ethminer, which is faster than the standard opencl ethminer. [https://github.com/Genoil/cpp-ethereum](https://github.com/Genoil/cpp-ethereum)
 
