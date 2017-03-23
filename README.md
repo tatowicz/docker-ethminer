@@ -21,15 +21,15 @@ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 -O 0x20ad58fe023265577565c7eb44b55c31e7497c33.cSquared/ajtatowicz@gmail.com
 ```
 
-**Note** --farm-recheck, -U, -E and -R are set by default
+**Note** --farm-recheck and -U are set by default
 
 ### Help
 ```
-Genoil's ethminer 0.9.41-genoil-1.0.8
+Genoil's ethminer 0.9.41-genoil-1.1.7
 =====================================================================
 Forked from github.com/ethereum/cpp-ethereum
 CUDA kernel ported from Tim Hughes' OpenCL kernel
-With contributions from nerdralph, RoBiK, tpruvot and sp_
+With contributions from nicehash, nerdralph, RoBiK and sp_ 
 
 Please consider a donation to:
 ETH: 0xeb9310b185455f863f526dab3d245809f6854b4d
@@ -45,11 +45,14 @@ Work farming mode:
 	-FS, --failover-stratum <host:port>  Failover stratum server at host:port
     -O, --userpass <username.workername:password> Stratum login credentials
     -FO, --failover-userpass <username.workername:password> Failover stratum login credentials (optional, will use normal credentials when omitted)
-    --work-timeout <n> reconnect/failover after n seconds of working on the same (stratum) job. Defaults to 60. Don't set lower than max. avg. block time
+    --work-timeout <n> reconnect/failover after n seconds of working on the same (stratum) job. Defaults to 180. Don't set lower than max. avg. block time
+    -SC, --stratum-client <n>  Stratum client version. Defaults to 1 (async client). Use 2 to use the new synchronous client.
+    -SP, --stratum-protocol <n> Choose which stratum protocol to use:
+        0: official stratum spec: ethpool, ethermine, coinotron, mph, nanopool (default)
+        1: eth-proxy compatible: dwarfpool, f2pool, nanopool
+        2: EthereumStratum/1.0.0: nicehash
+    -SE, --stratum-email <s> Email address used in eth-proxy (optional)
     --farm-recheck <n>  Leave n ms between checks for changed work (default: 500). When using stratum, use a high value (i.e. 2000) to get more stable hashrate output
-    --no-precompute  Don't precompute the next epoch's DAG.
-Ethash verify mode:
-    -w,--check-pow <headerHash> <seedHash> <difficulty> <nonce>  Check PoW credentials for validity.
 
 Benchmarking mode:
     -M [<n>],--benchmark [<n>] Benchmark for mining and exit; Optionally specify block number to benchmark against specific DAG.
@@ -58,26 +61,20 @@ Benchmarking mode:
     --benchmark-trials <n>  Set the duration of warmup for the benchmark tests (default: 5).
 Simulation mode:
     -Z [<n>],--simulation [<n>] Mining test mode. Used to validate kernel optimizations. Optionally specify block number.
-    --phone-home <on/off>  When benchmarking, publish results (default: off)
-DAG file management:
-    -D,--create-dag <number>  Create the DAG in preparation for mining on given block and exit.
-    -R <s>, --dag-dir <s> Store/Load DAG files in/from the specified directory. Useful for running multiple instances with different configurations.
-    -E <mode>, --erase-dags <mode> Erase unneeded DAG files. Default is 'none'. Possible values are:
-        none  - don't erase DAG files (default)
-        old   - erase all DAG files older than current epoch
-		bench - like old, but keep epoch 0 for benchmarking
-        all   - erase all DAG files. After deleting all files, setting changes to none.
 Mining configuration:
-    -C,--cpu  When mining, use the CPU.
     -G,--opencl  When mining use the GPU via OpenCL.
     -U,--cuda  When mining use the GPU via CUDA.
+    -X,--cuda-opencl Use OpenCL + CUDA in a system with mixed AMD/Nvidia cards. May require setting --opencl-platform 1
     --opencl-platform <n>  When mining using -G/--opencl use OpenCL platform n (default: 0).
     --opencl-device <n>  When mining using -G/--opencl use OpenCL device n (default: 0).
     --opencl-devices <0 1 ..n> Select which OpenCL devices to mine on. Default is to use all
     -t, --mining-threads <n> Limit number of CPU/GPU miners to n (default: use everything available on selected platform)
     --allow-opencl-cpu Allows CPU to be considered as an OpenCL device if the OpenCL platform supports it.
     --list-devices List the detected OpenCL/CUDA devices and exit. Should be combined with -G or -U flag
-    --current-block Let the miner know the current block number at configuration time. Will help determine DAG size and required GPU memory.
+    -L, --dag-load-mode <mode> DAG generation mode.
+        parallel    - load DAG on all GPUs at the same time (default)
+        sequential  - load DAG on GPUs one after another. Use this when the miner crashes during DAG generation
+        single <n>  - generate DAG on device n, then copy to other devices
     --cl-extragpu-mem Set the memory (in MB) you believe your GPU requires for stuff other than mining. default: 0
     --cl-local-work Set the OpenCL local work size. Default is 64
     --cl-global-work Set the OpenCL global work size as a multiple of the local work size. Default is 4096 * 64
