@@ -22,6 +22,7 @@ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 ```
 
 **Note** --farm-recheck and -U are set by default
+
 **Note** Be sure to change the -O argument to your mining address and email. The format goes like this "address.worker/email"
 
 ### Help
