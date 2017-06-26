@@ -18,7 +18,7 @@ nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
 # Example
 nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 -S us-west1.nanopool.org:9999 \
--O 0x20ad58fe023265577565c7eb44b55c31e7497c33.cSquared/ajtatowicz@gmail.com
+-O <your_wallet_address>.<worker_name>/<your_email>
 ```
 
 **Note** --farm-recheck and -U are set by default
