@@ -9,11 +9,11 @@ Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
 ### Requirements
 - Nvidia drivers for your GPU, you can get them here: [Nvidia drivers](http://www.nvidia.com/Download/index.aspx)
-- nvidia-docker (so docker can access your GPU) install instructions here: [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+- Nvidia-docker (so docker can access your GPU) install instructions here: [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
 ### How to run
 ```
-nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
+$ nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
 
 # Example
 nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
@@ -26,8 +26,8 @@ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 **Note** Be sure to change the -O argument to your mining address and email. The format goes like this "address.worker/email"
 
 ### Help
-`etherminer --help`
+`$ etherminer --help`
 
 ### Questions?
-You can leave a comment below or email to `ajtatowicz@gmail.com`. I may have ran into the issue you have.  
+You can leave a comment below or send an email to `ajtatowicz@gmail.com`.
 If this helped and you'd like to leave a tip --> `0x20ad58fe023265577565c7eb44b55c31e7497c33`
