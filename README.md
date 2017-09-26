@@ -16,7 +16,7 @@ Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 $ nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
 
 # Example
-nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
+$ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 -S us-west1.nanopool.org:9999 \
 -O <your_wallet_address>.<worker_name>/<your_email>
 ```
