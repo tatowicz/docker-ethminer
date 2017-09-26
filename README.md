@@ -5,7 +5,7 @@
 
 Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
-**Note** This image builds ethminer, which an activily maintained Genoil fork <https://github.com/ethereum-mining/ethminer>
+**Note:** This image builds ethminer, which an activily maintained Genoil fork <https://github.com/ethereum-mining/ethminer>
 
 ### Requirements
 - Nvidia drivers for your GPU, you can get them here: [Nvidia drivers](http://www.nvidia.com/Download/index.aspx)
@@ -21,9 +21,9 @@ $ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 -O <your_wallet_address>.<worker_name>/<your_email>
 ```
 
-**Note** `-U` is set by default
+**Note:** `-U` is set by default
 
-**Note** Be sure to change the -O argument to your mining address and email. The format goes like this "address.worker/email"
+**Note:** Be sure to change the -O argument to your mining address and email. The format goes like this "address.worker/email"
 
 ### Help
 `$ etherminer --help`
