@@ -23,11 +23,12 @@ $ nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
 
 **Note:** `-U` is set by default
 
-**Note:** Be sure to change the -O argument to your mining address and email. The format goes like this "address.worker/email"
+**Note:** Be sure to change the -O argument to your mining address and email.  
+The format goes like this "address.worker/email"
 
 ### Help
 `$ etherminer --help`
 
 ### Questions?
-You can leave a comment below or send an email to `ajtatowicz@gmail.com`.
+You can leave a comment below or send an email to `ajtatowicz@gmail.com`.  
 If this helped and you'd like to leave a tip --> `0x20ad58fe023265577565c7eb44b55c31e7497c33`
