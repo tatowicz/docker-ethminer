@@ -5,7 +5,7 @@
 
 Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
-**Note:** This image builds ethminer, which an activily maintained Genoil fork <https://github.com/ethereum-mining/ethminer>
+**Note:** This image builds ethminer, which is an activily maintained Genoil fork <https://github.com/ethereum-mining/ethminer>
 
 ### Requirements
 - Nvidia drivers for your GPU, you can get them here: [Nvidia drivers](http://www.nvidia.com/Download/index.aspx)
